@@ -1,0 +1,30 @@
+#spring.application.name=ems-backend
+#spring.datasource.url=jdbc:mysql://localhost:3306/myDB
+#spring.datasource.username=root
+#spring.datasource.password=ng@n2000
+#
+#spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQLDialect
+#spring.jpa.hibernate.ddl-auto= update
+server:
+  port: 8080
+#  servlet:
+#    context-path: /student
+spring:
+  datasource:
+     url: jdbc:mysql://localhost:3306/student
+     username: root
+     password: ngan2000
+     driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: true
+    database: mysql
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+jwt:
+  signerkey: "r/Hip25eHGIx9QWhD0sIXSxzqhdiElAFk1VCRmTETbdxC2yPVHZkZt+RRaeKMutD"
+  valid-duration: 20    #  config theo đớn vị giây
+  refreshable-duration: 120 #config theo đớn vị giây
